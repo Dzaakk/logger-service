@@ -2,7 +2,8 @@ syntax = "proto3";
 
 package logs;
 
-option go_package = "/logs";
+option go_package = ".";
+// option go_package = "/logs";
 
 message Log{
     string name = 1;
@@ -19,5 +20,5 @@ message LogResponse {
 }
 
 service LogService {
-    rpc WriteLog(LogRequest) returns(LogResponse)
+    rpc WriteLog(LogRequest) returns(LogResponse);
 }
